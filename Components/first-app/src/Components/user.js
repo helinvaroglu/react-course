@@ -1,11 +1,19 @@
-function User(props) {
+function User({name, surname, isLoggedIn, friends}) {
     return (
-        <div>
-            {props.isLoggedIn 
-                ? `${props.name} ${props.surname}` 
+        <>
+            <h1>{isLoggedIn 
+                ? `${name} ${surname}` 
                 : "You are not logged in."
-            }
-        </div>
+            }</h1>
+
+            {
+                friends.map((friend, index) => (
+                <div key={index}>
+                    {index} - {friend}
+                </div>
+            ))}
+
+        </>
     );
 }
 
