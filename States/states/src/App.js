@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react'
+
+// useState is hook for using states.
+// State is an object that keeps changeable variable
 
 function App() {
+  const [name, setName] = useState('Helin');   // [nameOfState, funcThatChangesIt]
+  const [age, setAge] =  useState(23);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello {name}!</h1>
+      <h2>{age}</h2>
+      <button onClick={() => setName('Doga')}>Click</button>
+      <button onClick={() => setAge(24)}>Click</button>
     </div>
   );
 }
