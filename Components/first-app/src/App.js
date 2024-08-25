@@ -20,8 +20,12 @@ function App() {
       <User 
         name="Helin" 
         surname="Varoglu" 
-        isLoggedIn={false}
+        isLoggedIn={true}
         friends={["Ceren", "Doga", "Melike"]}
+        address={{
+          title: 'Istanbul Ev',
+          zip: 34755,
+        }}
       />
 
       {/* <p className="xyz">
