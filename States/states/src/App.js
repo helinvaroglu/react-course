@@ -7,6 +7,7 @@ function App() {
   const [name, setName] = useState('Helin');   // [nameOfState, funcThatChangesIt]
   const [age, setAge] =  useState(23);
   const [friends, setFriends] = useState(['Ceren', 'Melike', 'Alara']);
+  const [address, setAddress] = useState({ title: 'Istanbul', zip: 34786})
 
   return (
     <div className="App">
@@ -26,6 +27,15 @@ function App() {
       {/* Adding new object to array by keeping old values */}
       <button onClick={() => setFriends([...friends,"Doga"])}>Add new friend</button>
 
+      <hr />
+      <br></br>
+
+      <h2>Address</h2>
+      <div>{address.title} {address.zip}</div>
+      <br></br>
+      <button onClick={() => setAddress({title: 'Ankara', zip: 44444})}>
+        Change address
+      </button>
     </div>
   );
 }
