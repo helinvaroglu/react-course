@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState, useEffect} from "react";
+
+// Catching rendering of a component in other words renewing new state of a component
+// The hook useEffect is for understanding this cycle.
 
 function App() {
+  const [number, setNumber] = useState(0);
+
+  useEffect(() => {
+    console.log("State updated.")
+  }, [number]);
+
+  useEffect(() => {
+    console.log("Component has been mounted.")
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1>{number}</h1>
+     <button onClick={() => setNumber(number+1)}>Click</button>
     </div>
   );
 }
