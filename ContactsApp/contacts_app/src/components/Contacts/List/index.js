@@ -11,7 +11,6 @@ function List({contacts}) {
 
     return (
         <div>
-
             <input placeholder="Filter contacts" value={filterText} onChange={(e) => setFilterText(e.target.value)}></input>
             <ul className="list">
 				{filtered.map((contact, i) => (
