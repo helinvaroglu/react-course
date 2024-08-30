@@ -10,6 +10,7 @@ import {
 import About from './components/About';
 import Users from './components/Users';
 import Home from './components/Home';
+import User from './components/User';
 
 
 // React router lets you define routes in your application. 
@@ -35,9 +36,11 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/users" element={<Users />} />
+          {/* Dynamic Route for User with ID */}
+          <Route path="/user/:id" element={<User />} />
         </Routes>
       </div>
     </Router>
