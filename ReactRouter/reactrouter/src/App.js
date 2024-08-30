@@ -17,6 +17,8 @@ import User from './components/User';
 // Each route is associated with a specific React component 
 // that renders only that component.
 
+// Nesting can be used when we want same page only one component rendering.
+
 function App() {
   return (
     <Router>
